@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src='@Url.Content("~/Scripts/TestTaskJS.js")'></script>
+
+<div class="jumbotron">
+	<h1>Тестовое задание ManageBand</h1>
+	<h2>Филиппов Сергей Сергеевич</h2>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<h3>Контрольная точка и точки полигона</h3>
+		<div class="form-group">
+			<label for="formGroupExampleInput">Количество точек</label>
+			<input type="number" style="width: 80px" class="form-control" id="countPoints">
+		</div>
+		<div class="form-group">
+			<label for="formGroupExampleInput2">Координаты контрольной точки</label>
+			<p>X - <input type="number" style="width: 80px" id="checkPointX"></p>
+			<p>Y - <input type="number" style="width: 80px" id="checkPointY"></p>
+		</div>
+		<input type="button" class="btn btn-primary" value="Задать" onClick="CreatePoints()" />
+		<div id="PointsContainer">
+		</div>
+	</div>
+
+    <div class="col-md-6">
+        <h3>Полигон</h3>
+		<p>Размер полигона 400 на 400, маштаб 1 клетка 20 у.е.</p>
+		<canvas id="mycanvas"></canvas>
+	</div>
+</div>
